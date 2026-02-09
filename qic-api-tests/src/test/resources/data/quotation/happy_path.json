@@ -1,0 +1,10 @@
+{
+  "Owner": {
+    "EmiratesIDNo": "${random.alphanum(12)}",
+    "Mobile": "0500000000"
+  },
+  "Vehicle": {
+    "ManufactureYear": 2017
+  },
+  "RequestId": "${random.uuid}"
+}

@@ -1,0 +1,7 @@
+{
+  "Owner": {
+    "EmiratesIDNo": "",
+    "Mobile": ""
+  },
+  "RequestId": "${random.uuid}"
+}
