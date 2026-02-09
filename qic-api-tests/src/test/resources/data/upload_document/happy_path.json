@@ -1,9 +1,0 @@
-{
-  "PolicyNo": "${random.alphanum(10)}",
-  "Attachments": [
-    {
-      "File": [1,2,3,4,5],
-      "FileName": "document.pdf"
-    }
-  ]
-}

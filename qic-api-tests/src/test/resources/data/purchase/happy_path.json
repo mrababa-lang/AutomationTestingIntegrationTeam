@@ -1,7 +1,0 @@
-{
-  "QuotationNo": "${ctx:QuotationNo}",
-  "QuoteReferenceNo": "${ctx:QuoteReferenceNo}",
-  "Payment": {
-    "Method": "CARD"
-  }
-}

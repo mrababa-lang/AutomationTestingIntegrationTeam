@@ -1,3 +1,0 @@
-{
-  "PolicyNo": "${random.alphanum(10)}"
-}
