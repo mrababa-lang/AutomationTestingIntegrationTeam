@@ -2,10 +2,10 @@ package com.company.qic.core;
 
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;
-import io.restassured.filter.FilterableRequestSpecification;
-import io.restassured.filter.FilterableResponseSpecification;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
+import io.restassured.specification.FilterableRequestSpecification;
+import io.restassured.specification.FilterableResponseSpecification;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

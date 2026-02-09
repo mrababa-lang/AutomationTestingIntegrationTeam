@@ -6,13 +6,14 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Hooks {
   @Before
   public void beforeScenario(Scenario scenario) {
     ScenarioContext context = ScenarioContextHolder.get();
-    Set<String> tags = scenario.getSourceTagNames();
+    Set<String> tags = new HashSet<>(scenario.getSourceTagNames());
     context.put("tags", tags);
   }
 

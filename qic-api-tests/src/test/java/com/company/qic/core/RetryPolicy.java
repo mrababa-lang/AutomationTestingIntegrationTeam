@@ -42,7 +42,7 @@ public final class RetryPolicy {
     Retry retry = Retry.of(name, retryConfig);
     retry.getEventPublisher()
         .onRetry(event -> LOGGER.warn("Retry attempt {} for {} due to {}", event.getNumberOfRetryAttempts(), name,
-            event.getLastThrowable() != null ? event.getLastThrowable().getMessage() : event.getLastResult()))
+            event.getLastThrowable() != null ? event.getLastThrowable().getMessage() : event.getResult()))
         .onError(event -> LOGGER.warn("Retry failed for {} after {} attempts", name, event.getNumberOfRetryAttempts()));
     return retry;
   }
