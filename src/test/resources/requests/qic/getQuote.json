@@ -1,0 +1,63 @@
+{
+  "Auth": {
+    "UserName": "255104",
+    "Password": "Test@123"
+  },
+  "CurrencyCode": "AED",
+  "QuoteReferenceNo": "H2L5U0D900822911C",
+  "ProductCode": "2150",
+  "QuoteTypeCode": "1",
+  "PolicyEffectiveDate": "2023-08-05T12:18:54+04:00",
+  "Owner": {
+    "IdentityTypeCode": 1,
+    "EmiratesIDNo": "784198560386538",
+    "CommercialNo": null,
+    "LicenceIssueDate": "2005-06-18",
+    "NationalityCode": "1",
+    "Age": 37,
+    "HasOtherCountryLicense": false,
+    "OtherCountryLicenseCode": 0,
+    "OtherCountryLicenseYears": 0,
+    "DateOfBirth": "1985-01-28"
+  },
+  "Car": {
+    "IdentityTypeCode": 1,
+    "MakeCode": "0775",
+    "Make": "Toyota",
+    "ModelCode": "101906",
+    "Model": "Fortuner",
+    "BodyCategoryCode": "4",
+    "ManufactureYear": "2017",
+    "PassengersNo": "5",
+    "Cylinders": "6",
+    "RegistrationDate": "2017-06-25",
+    "PlaceofIssueCityCode": "1",
+    "ChassisNo": "1GNSK6KC2FR121868",
+    "EstimatedValue": "90000",
+    "SpecCode": 1,
+    "UsageCode": "1",
+    "Trim": null,
+    "TrimCode": null
+  },
+  "CurrentInsuranceTypeCode": "1",
+  "ClaimsHistoryCode": 5,
+  "ClaimsCount": null,
+  "IsRenewal": false,
+  "HasAdditionalDrivers": true,
+  "AdditionalDrivers": [
+    {
+      "EmiratesIDNo": 784199112432175,
+      "LicenceIssueDate": "2021-12-20",
+      "NationalityCode": 11,
+      "DateOfBirth": "1988-04-01"
+    }
+  ],
+  "HasScheme": false,
+  "SchemeInfo": null,
+  "CustomParameters": {
+    "BodyCategoryName": "Coupe",
+    "NationalityIsoCode": "784",
+    "PlaceofIssueCityName": "ABU DHABI",
+    "CylindersCode": "1006"
+  }
+}

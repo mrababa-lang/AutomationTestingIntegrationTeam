@@ -1,0 +1,47 @@
+{
+  "Auth": {
+    "UserName": "255104",
+    "Password": "Test@123"
+  },
+  "PolicyReferenceNo": "P-B8R2V4W19",
+  "QuoteReferenceNo": "H2L5U0D900822910C",
+  "QuotationNo": "2330038521",
+  "SelectedOfferReferenceNo": "2150",
+  "SelectedExtraFeatures": [],
+  "Owner": {
+    "FullNameEn": "Abdel Fattah",
+    "FullNameAr": "عبد الفتاح",
+    "EmailAddress": "swetha.batchu@tameen.ae",
+    "MobileNumber": "0566585375",
+    "TrafficNo": 5050004029,
+    "LicenceNo": 4156909,
+    "LicenceIssuePlaceCode": 6,
+    "LicenceExpiryDate": "2025-06-16",
+    "Gender": 2,
+    "Occupation": "EMPLOYEE",
+    "Address": "الشارقة / الشرقان",
+    "TRN": null,
+    "DateOfBirth": "1985-01-28"
+  },
+  "Car": {
+    "CustomCardNo": null,
+    "RegistrationExpiryDate": "2018-11-06",
+    "PlateTypeCode": 1,
+    "PlateCode": "7",
+    "PlateNo": 22456,
+    "ColorCode": "1",
+    "EngineNo": "NONE",
+    "EngineCapacity": 0,
+    "OriginCode": 47,
+    "IsMortgage": false,
+    "MortgageBy": ""
+  },
+  "TransactionType": null,
+  "PaymentType": 1,
+  "PaymentCreditNote": null,
+  "PolicyOriginalTotalAmount": 693,
+  "ActualAmountPaid": 693,
+  "DiscountedAmount": 0,
+  "AttachmentsURLs": null,
+  "CustomParameters": null
+}
