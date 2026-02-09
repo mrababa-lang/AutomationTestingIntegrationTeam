@@ -18,6 +18,12 @@ To serve the report locally:
 mvn allure:serve
 ```
 
+### Run tests and open the report automatically
+
+```bash
+./scripts/run-tests-with-allure.sh
+```
+
 If the report is empty, verify that `target/allure-results` contains JSON files and that the
 TestNG listener `io.qameta.allure.testng.AllureTestNg` is registered in
 `src/test/resources/testng.xml`.
