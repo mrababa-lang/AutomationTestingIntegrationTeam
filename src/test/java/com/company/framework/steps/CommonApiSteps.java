@@ -12,6 +12,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,10 +48,28 @@ public class CommonApiSteps {
         ScenarioContext.set("lastResponse", response);
     }
 
+    @When("I send a POST request to {string} with body from {string}")
+    public void sendPostFromResource(String path, String resourcePath) {
+        String body = loadResource(resourcePath);
+        Response response = apiClient.sendPost(path, body);
+        ScenarioContext.set("lastResponse", response);
+    }
+
     @Then("response status should be {int}")
     public void responseStatusShouldBe(int status) {
         Response response = ScenarioContext.get("lastResponse");
         Assertions.assertStatus(response, status);
+    }
+
+    @Then("response status should be one of {string}")
+    public void responseStatusShouldBeOneOf(String statuses) {
+        Response response = ScenarioContext.get("lastResponse");
+        String[] parts = statuses.split(",");
+        int[] statusCodes = new int[parts.length];
+        for (int i = 0; i < parts.length; i++) {
+            statusCodes[i] = Integer.parseInt(parts[i].trim());
+        }
+        Assertions.assertStatusIn(response, statusCodes);
     }
 
     @And("json path {string} should equal {string}")
@@ -74,5 +97,19 @@ public class CommonApiSteps {
     @And("I use auth {string}")
     public void useAuth(String type) {
         ScenarioContext.set("authTypeOverride", type);
+    }
+
+    private String loadResource(String resourcePath) {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        URL resource = classLoader.getResource(resourcePath);
+        if (resource == null) {
+            throw new IllegalArgumentException("Resource not found: " + resourcePath);
+        }
+        try {
+            Path path = Path.of(resource.toURI());
+            return Files.readString(path);
+        } catch (IOException | URISyntaxException exception) {
+            throw new IllegalStateException("Failed to load resource: " + resourcePath, exception);
+        }
     }
 }
