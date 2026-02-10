@@ -1,6 +1,6 @@
 package com.company.framework.core;
 
-import io.qameta.allure.Allure;
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;
 import io.restassured.http.Headers;
@@ -33,8 +33,8 @@ public class Logging implements Filter {
         String requestAttachment = String.format("METHOD: %s\nURL: %s\nHEADERS: %s\nBODY: %s", method, url, redactedRequestHeaders, redactedRequestBody);
         String responseAttachment = String.format("STATUS: %s\nHEADERS: %s\nBODY: %s", response.getStatusCode(), redactedResponseHeaders, redactedResponseBody);
 
-        Allure.addAttachment("Request", "text/plain", requestAttachment, ".txt");
-        Allure.addAttachment("Response", "text/plain", responseAttachment, ".txt");
+        ExtentCucumberAdapter.addTestStepLog("Request\n" + requestAttachment);
+        ExtentCucumberAdapter.addTestStepLog("Response\n" + responseAttachment);
 
         ResponseContext context = new ResponseContext(
                 response.getStatusCode(),

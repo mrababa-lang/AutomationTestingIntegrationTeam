@@ -4,5 +4,4 @@ set -euo pipefail
 echo "Running test suite..."
 mvn clean test
 
-echo "Opening Allure report..."
-mvn allure:serve
+echo "Extent report generated at target/extent-report/extent-report.html"

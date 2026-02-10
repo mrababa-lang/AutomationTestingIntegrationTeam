@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>standard</theme>
+        <documentTitle>API Test Report</documentTitle>
+        <reportName>API Test Results</reportName>
+        <encoding>utf-8</encoding>
+    </configuration>
+</extentreports>

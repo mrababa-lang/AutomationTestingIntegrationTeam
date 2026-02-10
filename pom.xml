@@ -13,8 +13,8 @@
         <cucumber.version>7.14.0</cucumber.version>
         <testng.version>7.8.0</testng.version>
         <restassured.version>5.4.0</restassured.version>
-        <allure.version>2.24.0</allure.version>
-        <allure.maven.version>2.11.2</allure.maven.version>
+        <extentreports.version>5.1.0</extentreports.version>
+        <extentreports.cucumber.version>1.13.0</extentreports.cucumber.version>
         <slf4j.version>2.0.9</slf4j.version>
         <logback.version>1.4.11</logback.version>
         <jackson.version>2.15.2</jackson.version>
@@ -58,15 +58,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-cucumber7-jvm</artifactId>
-            <version>${allure.version}</version>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure.version}</version>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>${extentreports.cucumber.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -99,17 +99,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <allure.results.directory>target/allure-results</allure.results.directory>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>${allure.maven.version}</version>
-                <configuration>
-                    <resultsDirectory>target/allure-results</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
