@@ -1,29 +1,22 @@
 # AutomationTestingIntegrationTeam
 
-## Allure reporting
+## Extent reporting
 
-This project emits Allure results during the TestNG/Cucumber run and generates the report from
-`target/allure-results`.
+This project emits an Extent Spark report during the TestNG/Cucumber run and writes it to
+`target/extent-report/extent-report.html`.
 
 ### Run tests and generate the report
 
 ```bash
 mvn clean test
-mvn allure:report
-```
-
-To serve the report locally:
-
-```bash
-mvn allure:serve
 ```
 
 ### Run tests and open the report automatically
 
 ```bash
-./scripts/run-tests-with-allure.sh
+./scripts/run-tests-with-extent.sh
 ```
 
-If the report is empty, verify that `target/allure-results` contains JSON files and that the
-TestNG listener `io.qameta.allure.testng.AllureTestNg` is registered in
-`src/test/resources/testng.xml`.
+If the report is empty, verify that `src/test/resources/extent.properties` is on the test
+classpath and that the adapter plugin is registered in
+`src/test/java/com/company/framework/runners/TestNgCucumberRunner.java`.
